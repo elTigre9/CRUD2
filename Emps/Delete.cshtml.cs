@@ -28,7 +28,8 @@ namespace CRUD2.Pages.Emps
                 return NotFound();
             }
 
-            Employees = await _context.Employees.FirstOrDefaultAsync(m => m.EID == id);
+            Employees = await _context.Employees
+                .Include(e => e.Depts).FirstOrDefaultAsync(m => m.EID == id);
 
             if (Employees == null)
             {

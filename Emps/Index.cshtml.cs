@@ -22,7 +22,8 @@ namespace CRUD2.Pages.Emps
 
         public async Task OnGetAsync()
         {
-            Employees = await _context.Employees.ToListAsync();
+            Employees = await _context.Employees
+                .Include(e => e.Depts).ToListAsync();
         }
     }
 }

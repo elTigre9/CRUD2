@@ -20,6 +20,7 @@ namespace CRUD2.Pages.Emps
 
         public IActionResult OnGet()
         {
+        ViewData["DID"] = new SelectList(_context.Departments, "DID", "DID");
             return Page();
         }
 

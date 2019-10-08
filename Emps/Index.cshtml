@@ -19,6 +19,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Employees[0].LName)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employees[0].Depts)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -30,6 +33,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Depts.DID)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.EID">Edit</a> |
