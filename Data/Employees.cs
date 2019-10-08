@@ -14,8 +14,11 @@ namespace CRUD2.Data
         public int EID { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }
+        
+        // foreign key
+        public int DID { get; set; }
 
         [ForeignKey("DID")]
-        public Departments DeptId { get; set; }
+        public Departments Depts { get; set; }
     }
 }
